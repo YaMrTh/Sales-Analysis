@@ -1,0 +1,101 @@
+<!-- web/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrival Import App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Arrival Import App</h1>
+
+  <section class="card">
+    <h2>1. Import Arrival_Raw CSV</h2>
+    <form id="upload-form">
+      <input type="file" id="arrival-file" name="file" accept=".csv" required />
+      <button type="submit">Upload & Transform</button>
+    </form>
+    <pre id="upload-result"></pre>
+  </section>
+
+  <section class="card">
+    <h2>2. Add Formule Séjour</h2>
+    <form id="formule-form">
+      <label>
+        Code formule_sejour
+        <input type="text" name="formule_sejour" required />
+      </label>
+      <label><input type="checkbox" name="room_only" /> Room only</label>
+      <label><input type="checkbox" name="bed_breakfast" /> Bed & Breakfast</label>
+      <label><input type="checkbox" name="all_inclusive" /> All inclusive</label>
+      <label><input type="checkbox" name="demi_pension" /> Demi-pension</label>
+      <label><input type="checkbox" name="non_refundable" /> Non refundable</label>
+      <label><input type="checkbox" name="flexible" /> Flexible</label>
+      <button type="submit">Add formule</button>
+    </form>
+    <pre id="formule-result"></pre>
+  </section>
+
+  <section class="card">
+    <h2>3. Add Segmentation Row</h2>
+    <form id="segmentation-form">
+      <label>
+        type_client_resalys
+        <input type="text" name="type_client_resalys" required />
+      </label>
+      <label>
+        segment_resalys
+        <input type="text" name="segment_resalys" required />
+      </label>
+      <label>
+        canal_vente
+        <input type="text" name="canal_vente" />
+      </label>
+      <label>
+        origine_client
+        <input type="text" name="origine_client" />
+      </label>
+      <label>
+        categorie_client
+        <input type="text" name="categorie_client" />
+      </label>
+      <button type="submit">Add segmentation</button>
+    </form>
+    <pre id="segmentation-result"></pre>
+  </section>
+
+  <section class="card">
+    <h2>4. Add Etablissement</h2>
+    <form id="etablissement-form">
+      <label>
+        etablissement
+        <input type="text" name="etablissement" required />
+      </label>
+      <label>
+        site
+        <input type="text" name="site" required />
+      </label>
+      <label>
+        declinaison
+        <input type="text" name="declinaison" />
+      </label>
+      <label>
+        localisation
+        <input type="text" name="localisation" />
+      </label>
+      <label>
+        resalys_id
+        <input type="number" name="resalys_id" />
+      </label>
+      <label>
+        resalys_name
+        <input type="text" name="resalys_name" required />
+      </label>
+      <button type="submit">Add etablissement</button>
+    </form>
+    <pre id="etablissement-result"></pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
